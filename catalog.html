@@ -7,29 +7,30 @@
 <body>
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-header-logo" title="Логотип"><img src="img/logo.png" width="200" height="" alt="Логотип"></a>
+      <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа &laquo;Бородинский&raquo;"></a>
       <ul class="main-navigation-list">
-        <li class="main-navigation-item"><a href="#">Информация</a></li>
-        <li class="main-navigation-item"><a href="#">Новости</a></li>
-        <li class="main-navigation-item"><a href="#">Прайс-лист</a></li>
-        <li class="main-navigation-item"><a href="#">Магазин</a></li>
-        <li class="main-navigation-item"><a href="#">Контакты</a></li>
+        <li><a href="info.html">Информация</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="price.html">Прайс-лист</a></li>
+        <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation-list">
-        <li class="user-navigation-item">Вход</li>
+        <li class="user-navigation-login">Вход</li>
       </ul>
     </nav>
   </header>
-  <main class="content-catalog">
-    <h1>Средства для ухода</h1>
-    <ul class="catalog-navigation">
-      <li class="catalog-navigation-item"><a href="inde.html">Главная</a></li>
-      <li class="catalog-navigation-item"><a href="#">Магазин</a></li>
-      <li class="catalog-navigation-item"><a title="Ты здесь!">Средство для ухода</a></li>
+  <main class="container">
+    <h1 class="page-title">Средства для ухода</h1>
+    <ul class="breadcrumbs">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Магазин</a></li>
+      <li class="breadcrumbs-current">Средство для ухода</li>
     </ul>
-    <section class="filter">
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
       <form action="#">
-        <h2 class="brands">Производители:</h2>
+        <h3 class="brands">Производители:</h3>
         <ul class="brands-list">
           <li class="brands-item"><input type="checkbox" checked><label for="">Baxter of California</label></li>
           <li class="brands-item"><input type="checkbox"><label for="">Mr Natty</label></li>
@@ -38,7 +39,7 @@
           <li class="brands-item"><input type="checkbox"><label for="">Murray's</label></li>
           <li class="brands-item"><input type="checkbox" checked><label for="">American Crew</label></li>
         </ul>
-        <h2 class="product-groups">Группы товаров:</h2>
+        <h3 class="product-groups">Группы товаров:</h3>
         <ul class="product-groups-list">
           <li class="product-groups-item"><input type="radio"><label for="">Бритвенные принадлежности</label></li>
           <li class="product-groups-item"><input type="radio" checked><label for="">Средства для ухода</label></li>
@@ -47,27 +48,40 @@
         <button type="submit">Показать</button>
       </form>
     </section>
-    <section class="products">
-      <h2 class="visually-hidden">Продукты</h2>
-      <ul class="products-list">
-        <li class="products-item">
-          <figure>
-            <img src="" alt="Набор для путешествий &laquo;Baxter of California&raquo;">
-            <figcaption>Набор для путешествий &laquo;Baxter of California&raquo;</figcaption>
-          </figure>
-          <b class="prise">2900</b>
-          <a href="#">Купить</a>
+    <section class="catalog">
+      <h2 class="visually-hidden">Список средств для ухода</h2>
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <h3>
+            <a href="catalog-item.html">
+              <span catalog-category>
+                 Набор для путешествий
+              </span>
+              <span catalog-item-title>
+                &laquo;Baxter of California&raquo;
+              </span>
+            </a>
+          </h3>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1" width="220" height="165" alt="Набор для путешествий &laquo;Baxter of California&raquo;">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2900 руб.</b>
+            <a class="button" href="#">Купить</a>
+          </p>
         </li>
       </ul>
-    </section>
-    <ul class="navigation-list">
-      <li class="navigation-item"><a href="#">1</a></li>
-      <li class="navigation-item"><a title="Ты тут!">2</a></li>
-      <li class="navigation-item"><a href="#">3</a></li>
-      <li class="navigation-item"><a href="#">4</a></li>
+    <ul class="pagination-list">
+      <li class="pagination-item"><a href="#">1</a></li>
+      <li class="pagination-item pagination-item-current"><a>2</a></li>
+      <li class="pagination-item"><a href="#">3</a></li>
+      <li class="pagination-item"><a href="#">4</a></li>
     </ul>
+    </section>
   </main>
-    <footer class="main-footer">
+  <footer class="main-footer">
     <p class="footer-content">
       Барбершоп &laquo;Бородинский&raquo; <br>
       Адрес: г. Санкт-Петербург, Б. Конбшенная, Д. 19/8 <br>
@@ -93,5 +107,19 @@
       <a class="button" href="#">HTML Acadrmy</a>
     </p>
   </footer>
+  <section class="modal modal-login">
+    <h2 class="modal-login-header">
+      Личный кабинет
+    </h2>
+    <p>Введите пожалуйста свой логин и пароль</p>
+    <form action="#">
+      <input type="text"> <br>
+      <input type="text"> <br>
+      <input type="checkbox"><label for="">Запомните меня</label>
+      <a href="#">Я забыл пароль!</a>
+      <button type="submit">Войти</button>
+    </form>
+    <span class="modal-close">X</span>
+  </section>
 </body>
 </html>
